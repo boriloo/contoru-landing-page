@@ -22,13 +22,13 @@
             class="w-25 h-4 opacity-35 md:flex hidden dark:invert-0 invert" />
 
         <div class="flex flex-row gap-2">
-            <!-- Botão de Efeitos (Novo) -->
+
             <button class="md:flex hidden fx-toggle rounded-full bg-fg/35 shadow-black/20 shadow-lg text-bg backdrop-blur-2xl p-2 px-4 text-[14px] font-semibold  transition-all hover:bg-white 
                 hover:text-black cursor-pointer items-center justify-center">
                 EFEITOS: ON
             </button>
 
-            <!-- Toggle de Tema (Existente) -->
+
             <div
                 class="p-2 px-4 rounded-full flex flex-row gap-6 bg-fg/35 shadow-black/20 backdrop-blur-2xl shadow-lg items-center transition-all cursor-pointer hover:bg-fg/40 mode-toggle">
                 <div class="mode-ball absolute h-8.5 w-8.5 rounded-full bg-bg z-0 transition-all">
@@ -139,18 +139,22 @@
 
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-            <div class="bg-bgSec parallax w-full md:p-15 p-6 md:pb-30 pb-30 gap-4 items-center flex flex-col mt-[-5px] z-300"
+            <div class="bg-bgSec parallax w-full md:p-15 p-2 md:pb-30 pb-10 gap-4 items-center flex flex-col mt-[-5px] z-300"
                 parallax="1">
-                <h1 class="md:text-[60px] text-[50px]/[50px] text-fg mt-15 text-center">Acompanhe tudo que você (ou sua
+                <h1 class="md:text-[60px]/[60px] text-[43px]/[43px] text-fg mt-15 text-center px-2">Acompanhe tudo que
+                    você (ou sua
                     equipe) fez</h1>
-                <p class="md:text-[22px] text-[22px] text-fg text-center text-gray">Como manter-se sempre atualizado e
+                <p class="md:text-[22px] text-[20px] text-fg text-center text-gray w-full max-w-[700px] px-2">Como
+                    manter-se
+                    sempre atualizado e
                     ciente do
                     que está
-                    fazendo? <br>
+                    fazendo?
                     Simples, com uma
                     interface 100% <span class="text-second font-medium">visual</span> e <span
                         class="text-third font-medium">interativa</span>.
                 </p>
+
                 <div class="flex flex-row gap-5 w-full items-center flex-wrap max-w-[1300px] mt-5 md:pb-15">
                     <div class="flex flex-col flex-1 gap-6 min-w-[300px]">
 
@@ -323,8 +327,8 @@
 
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-            <div class="w-full bg-first p-20 trigger-section ">
-                <div class="flex flex-row w-full justify-between gap-10 flex-wrap text-fg text-[200px] oswald-text relative parallax"
+            <div class="w-full bg-first md:p-20 p-2 md:py-20 py-25 trigger-section overflow-x-hidden">
+                <div class="flex md:flex-row flex-col w-full justify-between gap-10 flex-wrap text-fg md:text-[200px] text-[75px] oswald-text relative parallax"
                     parallax="2">
                     <div class="flex overflow-hidden flex-row hide-text z-10">
                         <span style="--i: 1">C</span><span style="--i: 2">O</span><span style="--i: 3">N</span><span
@@ -341,7 +345,7 @@
                     </div>
 
                     <div
-                        class="flex overflow-hidden flex-row hide-text w-full max-w-[600px] h-[300px] absolute right-0 bottom-0">
+                        class="flex overflow-hidden flex-row hide-text w-full md:max-w-[600px] md:h-[300px] max-w-[330px] h-[300px] absolute right-0 bottom-16">
                         <div style="--i: 20; background-image: url(./public/assets/tree.jpg); background-size: cover; background-attachment: fixed;"
                             class="w-full h-full image hover:shadow-[-20px_0px_0px_10px] shadow-fg hover:translate-x-10 group transition-all duration-400">
                             <div
@@ -362,22 +366,22 @@
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
-            <div class="bg-bgSec parallax w-full md:p-15 p-6 md:py-30 py-30 gap-4 items-center flex flex-col mt-[-5px] z-300"
+            <div class="bg-bgSec parallax w-full md:p-15 p-4 md:py-30 py-10 gap-4 items-center flex flex-col mt-[-5px] z-300"
                 parallax="1">
 
-                <div class="w-full flex justify-around flex-row flex-wrap gap-4">
+                <div class="w-full flex justify-around flex-row flex-wrap md:gap-4 gap-8">
                     <div class="flex flex-col gap-3 justify-start w-full max-w-[700px]">
-                        <h1 class="md:text-[70px]/[70px] text-[50px]/[50px] text-fg mt-15 text-start">Compartilhe sem
+                        <h1 class="md:text-[70px]/[70px] text-[50px]/[50px] text-fg mt-15 text-start px-2">Compartilhe sem
                             complicação</h1>
-                        <p class="md:text-[22px] text-[22px] text-fg text-start text-gray">Crie um desktop
+                        <p class="md:text-[22px] text-[22px] text-fg text-start text-gray px-2">Crie um desktop
                             compartilhado, convide <span class="text-second font-medium">amigos</span>, trabalhem
                             juntos e <span class="text-third font-medium">compartilhem</span> ideias no mesmo espaço.
                         </p>
                     </div>
 
-                    <div class="bg-bg w-full max-w-[600px] rounded-xl border-2 border-fg/10 flex flex-col gap-4 p-6 parallax"
+                    <div class="bg-bg w-full max-w-[600px] rounded-xl border-2 border-fg/10 flex flex-col gap-4 md:p-6 p-4 parallax"
                         parallax="1.5">
-                        <div class="w-full flex flex-row justify-between items-center">
+                        <div class="w-full flex flex-row justify-between flex-wrap gap-2 items-center">
                             <p class="text-gray text-[24px]">Membros do Desktop</p>
                             <div class="flex flex-row gap-2 p-2 px-4 rounded-xl bg-first items-center justify-center">
                                 <img src="./public/icons/add.png" class="w-6 h-6">
@@ -385,7 +389,7 @@
                             </div>
                         </div>
 
-                        <div class="animated-card bg-[#f8f8f0] dark:bg-zinc-900 rounded-xl p-4 px-5 w-full flex flex-row gap-5 justify-start items-center relative overflow-hidden"
+                        <div class="md:mt-0 mt-2 animated-card bg-[#f8f8f0] dark:bg-zinc-900 rounded-xl p-4 px-5 w-full flex flex-row gap-5 justify-start items-center relative overflow-hidden"
                             style="--delay: 0s;">
                             <div
                                 class="card-glow absolute w-full h-full bg-first left-0 top-0 z-10 pointer-events-none">
