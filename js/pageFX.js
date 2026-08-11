@@ -19,8 +19,8 @@ function setupLerpScroll({
     return;
   }
 
-  // Variável que controla a suavização. 1 = instantâneo (sem lerp), caso contrário usa o LERP_EASE
-  let currentEase = window.innerWidth <= 768 ? 1 : ease;
+  let isMobile = window.innerWidth <= 768;
+  let currentEase = isMobile ? 1 : ease;
 
   let current = window.scrollY;
   let target = window.scrollY;
@@ -32,14 +32,20 @@ function setupLerpScroll({
 
   function syncBodyHeight() {
     document.body.style.height = `${wrapper.offsetHeight}px`;
-    // Atualiza o currentEase caso o usuário redimensione a tela
-    currentEase = window.innerWidth <= 768 ? 1 : ease;
+    isMobile = window.innerWidth <= 768;
+    currentEase = isMobile ? 1 : ease;
   }
 
   function updateParallax() {
     const viewportCenter = window.innerHeight / 2;
 
     parallaxEls.forEach(({ el, factor }) => {
+      if (isMobile) {
+        el.style.setProperty('--scroll-y', `0px`);
+        el.style.transform = 'translate3d(var(--mouse-x, 0px), var(--mouse-y, 0px), 0px)';
+        return;
+      }
+
       const rect = el.getBoundingClientRect();
       const elementCenter = rect.top + rect.height / 2;
       const offsetFromCenter = elementCenter - viewportCenter;
@@ -53,7 +59,6 @@ function setupLerpScroll({
 
   function raf() {
     target = window.scrollY;
-    // Usa o currentEase em vez do ease padrão
     current = lerp(current, target, currentEase);
 
     const rounded = Math.round(current * 100) / 100;
@@ -63,7 +68,7 @@ function setupLerpScroll({
 
     const bgEls = document.querySelectorAll('.bg-fixed');
     bgEls.forEach(el => {
-      el.style.transform = `translate3d(0, ${rounded * 0.3}px, 0)`;
+      el.style.transform = isMobile ? 'translate3d(0, 0px, 0)' : `translate3d(0, ${rounded * 0.3}px, 0)`;
     });
 
     requestAnimationFrame(raf);
