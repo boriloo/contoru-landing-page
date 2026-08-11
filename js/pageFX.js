@@ -19,6 +19,9 @@ function setupLerpScroll({
     return;
   }
 
+  // Variável que controla a suavização. 1 = instantâneo (sem lerp), caso contrário usa o LERP_EASE
+  let currentEase = window.innerWidth <= 768 ? 1 : ease;
+
   let current = window.scrollY;
   let target = window.scrollY;
 
@@ -29,20 +32,20 @@ function setupLerpScroll({
 
   function syncBodyHeight() {
     document.body.style.height = `${wrapper.offsetHeight}px`;
+    // Atualiza o currentEase caso o usuário redimensione a tela
+    currentEase = window.innerWidth <= 768 ? 1 : ease;
   }
 
   function updateParallax() {
     const viewportCenter = window.innerHeight / 2;
 
     parallaxEls.forEach(({ el, factor }) => {
-      // Lê em tempo real para não quebrar com carregamento tardio de imagens
       const rect = el.getBoundingClientRect();
       const elementCenter = rect.top + rect.height / 2;
       const offsetFromCenter = elementCenter - viewportCenter;
 
       const translateY = -offsetFromCenter * (factor - 1) * parallaxIntensity;
 
-      // Mantém as variáveis CSS para não conflitar com o script do mouse
       el.style.setProperty('--scroll-y', `${translateY}px`);
       el.style.transform = 'translate3d(var(--mouse-x, 0px), calc(var(--mouse-y, 0px) + var(--scroll-y, 0px)), 0px)';
     });
@@ -50,7 +53,8 @@ function setupLerpScroll({
 
   function raf() {
     target = window.scrollY;
-    current = lerp(current, target, ease);
+    // Usa o currentEase em vez do ease padrão
+    current = lerp(current, target, currentEase);
 
     const rounded = Math.round(current * 100) / 100;
     wrapper.style.transform = `translate3d(0, ${-rounded}px, 0)`;

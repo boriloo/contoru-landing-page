@@ -1,5 +1,7 @@
 // @ts-nocheck
 document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = window.innerWidth <= 768;
+
     const container = document.querySelector('.flex.flex-col.w-full.max-w-\\[500px\\]');
     const cards = container ? container.querySelectorAll('.parallax') : [];
 
@@ -20,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentY = targetY;
     
     // Controle do Switch de Efeitos
-    let isFxEnabled = true;
+    let isFxEnabled = !isMobile; 
     const fxToggleBtn = document.querySelector('.fx-toggle');
 
-    if (fxToggleBtn) {
+    if (fxToggleBtn && !isMobile) {
         fxToggleBtn.addEventListener('click', () => {
             isFxEnabled = !isFxEnabled;
             fxToggleBtn.textContent = isFxEnabled ? 'EFEITOS: ON' : 'EFEITOS: OFF';
@@ -46,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Se for mobile, para a execução do script aqui.
+    if (isMobile) return; 
 
     window.addEventListener('mousemove', (e) => {
         if (!isFxEnabled) return;
