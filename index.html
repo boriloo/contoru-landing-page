@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./public/icons/contoru.png"> <!-- Adicione aqui -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./public/assets/lake.jpg" as="image">
+    <link rel="preload" href="./public/assets/city.jpg" as="image">
+    <link rel="preload" href="./public/assets/flowers.jpg" as="image">
+    <link rel="preload" href="./public/assets/canyonBlueSky.jpg" as="image">
 </head>
 
 <body class="bg-bg">
@@ -478,8 +482,20 @@
 
                     <div
                         class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[300px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
-                        <div class="w-full h-0 transition-all duration-500 group-hover:h-50"
-                            style="background-image: url(./public/assets/italy.jpg); background-size: cover;"></div>
+                        <div class="w-full h-0 transition-all duration-500 group-hover:h-50 relative overflow-hidden"
+                            style="background-image: url(./public/assets/mountain.jpg); background-size: cover;">
+
+                            <div class="transition-all animate-drag absolute flex-1 flex flex-col p-4 left-5 top-5 px-5 rounded-md 
+                                items-center gap-3 min-w-30 content-stretch">
+                                <div class="w-17 h-17"
+                                    style="background-image: url(./public/file/open-folder.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
+                                </div>
+                                <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
+                                    Imagens
+                                </p>
+                            </div>
+
+                        </div>
                         <div class="bg-bgSec p-5 min-h-40 group-hover:bg-first">
                             <img src="./public/icons/scribble.png"
                                 class="w-10 h-10 group-hover:scale-0 transition-all rotate-45">
@@ -501,8 +517,8 @@
 
                     <div
                         class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[300px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
-                        <div class="w-full h-0 transition-all duration-500 group-hover:h-50"
-                            style="background-image: url(./public/assets/italy.jpg); background-size: cover;"></div>
+                        <div class="w-full h-0 transition-all duration-500 group-hover:h-50 animate-filters"
+                            style="background-image: url(./public/assets/neon.jpg); background-size: cover;"></div>
                         <div class="bg-bgSec p-5 min-h-40 group-hover:bg-first">
                             <img src="./public/icons/scribble.png"
                                 class="w-10 h-10 group-hover:scale-0 transition-all rotate-90">
