@@ -19,9 +19,19 @@ function setupLerpScroll({
     return;
   }
 
+  let isFxEnabled = true;
   let isMobile = window.innerWidth <= 768;
-  let currentEase = isMobile ? 1 : ease;
+  
+  // Escuta o clique no botão FX para atualizar o estado aqui também
+  const fxToggleBtn = document.querySelector('.fx-toggle');
+  if (fxToggleBtn) {
+    fxToggleBtn.addEventListener('click', () => {
+      isFxEnabled = !isFxEnabled;
+      updateState();
+    });
+  }
 
+  let currentEase = (isMobile || !isFxEnabled) ? 1 : ease;
   let current = window.scrollY;
   let target = window.scrollY;
 
@@ -30,17 +40,22 @@ function setupLerpScroll({
     factor: parseFloat(el.getAttribute(parallaxAttr)) || 1
   }));
 
+  function updateState() {
+    isMobile = window.innerWidth <= 768;
+    currentEase = (isMobile || !isFxEnabled) ? 1 : ease;
+  }
+
   function syncBodyHeight() {
     document.body.style.height = `${wrapper.offsetHeight}px`;
-    isMobile = window.innerWidth <= 768;
-    currentEase = isMobile ? 1 : ease;
+    updateState();
   }
 
   function updateParallax() {
     const viewportCenter = window.innerHeight / 2;
+    const disableFx = isMobile || !isFxEnabled;
 
     parallaxEls.forEach(({ el, factor }) => {
-      if (isMobile) {
+      if (disableFx) {
         el.style.setProperty('--scroll-y', `0px`);
         el.style.transform = 'translate3d(var(--mouse-x, 0px), var(--mouse-y, 0px), 0px)';
         return;
@@ -60,6 +75,7 @@ function setupLerpScroll({
   function raf() {
     target = window.scrollY;
     current = lerp(current, target, currentEase);
+    const disableFx = isMobile || !isFxEnabled;
 
     const rounded = Math.round(current * 100) / 100;
     wrapper.style.transform = `translate3d(0, ${-rounded}px, 0)`;
@@ -68,7 +84,7 @@ function setupLerpScroll({
 
     const bgEls = document.querySelectorAll('.bg-fixed');
     bgEls.forEach(el => {
-      el.style.transform = isMobile ? 'translate3d(0, 0px, 0)' : `translate3d(0, ${rounded * 0.3}px, 0)`;
+      el.style.transform = disableFx ? 'translate3d(0, 0px, 0)' : `translate3d(0, ${rounded * 0.3}px, 0)`;
     });
 
     requestAnimationFrame(raf);
