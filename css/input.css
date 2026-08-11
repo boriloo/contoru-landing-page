@@ -1,0 +1,413 @@
+/* css/input.css */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Sekuya&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+    --font-display: 'Bebas Neue', sans-serif;
+
+    --color-bg: var(--bg);
+    --color-fg: var(--fg);
+    --color-bgSec: var(--bgSec);
+    --color-gray: var(--gray);
+    --color-first: var(--first);
+    --color-second: var(--second);
+    --color-third: var(--third);
+    --color-fourth: var(--fourth);
+}
+
+@layer base {
+    :root {
+        --bg: #f2f2e5;
+        --fg: #0f0f10;
+        --bgSec: #eeeedf;
+        --gray: #2b2b2d;
+        --first: #E73F1E;
+        --second: #FB6C00;
+        --third: #F9B637;
+        --fourth: #FFDD9C;
+    }
+
+    .dark {
+        --bg: #0f0f10;
+        --fg: #f2f2e5;
+        --bgSec: #131314;
+        --gray: #9d9d8b;
+        --first: #E73F1E;
+        --second: #FB6C00;
+        --third: #F9B637;
+        --fourth: #FFDD9C;
+
+        /* .blue-sky {
+            background-image: url('../public/assets/dark-blue.jpg');
+        } */
+
+        .sun {
+            background-image: url('../public/icons/black-sun.png');
+        }
+
+        .moon {
+            background-image: url('../public/icons/white-moon.png');
+        }
+
+        .mode-ball {
+            transform: translateX(105%);
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+    }
+
+    * {
+        font-family: 'Inter';
+        user-select: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .team-text {
+        font-family: 'Roboto';
+    }
+
+    .dev-text {
+        font-family: 'Quantico';
+    }
+
+    .design-text {
+        font-family: 'Permanent Marker';
+    }
+
+
+
+    h1 {
+        font-family: 'Fraunces';
+        font-weight: 600;
+
+        span {
+            font-family: 'Fraunces';
+            font-weight: 700;
+        }
+    }
+
+    .hide-text span {
+        display: inline-block;
+        transform: translateY(120%);
+        opacity: 0;
+    }
+
+    .trigger-section.in-view .hide-text span {
+        font-family: 'Oswald';
+        animation: slideUpLetter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: calc(var(--i) * 0.05s);
+    }
+
+    .hide-text .image {
+        display: inline-block;
+        transform: translateY(120%) scaleX(0);
+        opacity: 0;
+    }
+
+    .trigger-section.in-view .hide-text .image {
+        animation: slideUpImage 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: calc(var(--i) * 0.05s);
+    }
+
+    @keyframes slideUpImage {
+        0% {
+            transform: translateY(120%);
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUpLetter {
+        0% {
+            transform: translateY(120%);
+            opacity: 0;
+            font-family: 'Bona Nova SC', serif;
+        }
+
+        25% {
+            opacity: 1;
+            font-family: 'Sekuya', sans-serif;
+        }
+
+        50% {
+            font-family: 'Bona Nova SC', serif;
+        }
+
+        75% {
+            font-family: 'Sekuya', sans-serif;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+
+    .oswald-text {
+        font-family: 'Oswald';
+        font-weight: 800;
+    }
+
+    .image-hover-text {
+        font-family: 'Inter';
+    }
+
+    .animated-card {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    .animated-card.in-view {
+        animation: scaleCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: var(--delay);
+    }
+
+    .card-glow {
+        opacity: 1;
+    }
+
+    .animated-card.in-view .card-glow {
+        animation: fadeGlow 0.5s ease-out forwards;
+        animation-delay: calc(var(--delay) + 0.2s);
+        /* Começa a sumir logo após o card aparecer */
+    }
+
+    @keyframes scaleCard {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        30% {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fadeGlow {
+        to {
+            opacity: 0;
+        }
+    }
+
+    .img-layer {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+    }
+
+    .group:hover .img-1 {
+        animation: zoomFast 0.3s forwards;
+        animation-delay: 0.2s;
+    }
+
+    .group:hover .img-2 {
+        animation: zoomFast 0.3s forwards;
+        animation-delay: 0.2s;
+        /* Espera a img-1 terminar */
+    }
+
+    .group:hover .img-3 {
+        animation: zoomFast 0.3s forwards;
+        animation-delay: 0.4s;
+        /* Espera a img-2 terminar */
+    }
+
+    .group:hover .img-4 {
+        animation: zoomFast 0.3s forwards;
+        animation-delay: 0.6s;
+        /* Espera a img-3 terminar */
+    }
+
+    .group:hover .img-5 {
+        animation: zoomFast 5s forwards cubic-bezier(0.1, 1.06, 0.2, 1.06);
+        animation-delay: 0.8s;
+        /* Começa exatamente quando a img-4 termina */
+    }
+
+    @keyframes zoomFast {
+        0% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        85% {
+            transform: scale(1);
+            /* Conclui a pulsada antes de trocar */
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #lerp-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        will-change: transform;
+    }
+
+    .blue-sky {
+        background-image: url('../public/assets/blue.jpg');
+    }
+
+    .sun {
+        background-image: url('../public/icons/black-sun.png');
+    }
+
+    .moon {
+        background-image: url('../public/icons/white-moon.png');
+    }
+
+    .mode-ball {
+        transform: translateX(-20%);
+    }
+
+    .exists {
+        display: flex !important;
+        animation: fadeIn 0.3s forwards;
+    }
+
+    .exists .image {
+        animation: slideInImage 0.5s ease forwards;
+    }
+
+    .exists .square {
+        animation: slideInSquare 0.5s ease forwards;
+    }
+
+    .exists .square2 {
+        animation: slideInSquare2 0.5s ease forwards;
+    }
+
+    .exists .square3 {
+        animation: slideInSquare3 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            transform-origin: right;
+            transform: scale(1.05);
+            opacity: 0;
+        }
+
+        100% {
+            transform-origin: right;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInImage {
+        0% {
+            filter: blur(0.5vi);
+            transform-origin: right;
+            transform: translateX(-100px) scaleX(150%);
+        }
+
+        100% {
+            transform-origin: right;
+            transform: translateX(0px);
+        }
+    }
+
+    /* @keyframes slideInSquare {
+        0% {
+            filter: blur(0.5vi);
+            transform-origin: right;
+            transform: translateX(-100px) scaleX(150%);
+        }
+
+        100% {
+            transform-origin: right;
+            filter: blur(0.3vi);
+            transform: translateX(70px) translateY(30px) rotate(20deg);
+        }
+    }
+
+    @keyframes slideInSquare2 {
+        0% {
+            filter: blur(0.5vi);
+            transform-origin: right;
+            transform: translateX(-100px) scaleX(150%);
+        }
+
+        100% {
+            transform-origin: right;
+            filter: blur(0.3vi);
+            transform: translateX(70px) translateY(-130px) rotate(-30deg);
+        }
+    }
+
+    @keyframes slideInSquare3 {
+        0% {
+            filter: blur(0.5vi);
+            transform-origin: right;
+            transform: translateX(-450px) translateY(160px) rotate(50deg) scaleY(150%);
+        }
+
+        100% {
+            transform-origin: right;
+            filter: blur(0.3vi);
+            transform: translateX(-350px) translateY(70px) rotate(160deg);
+        }
+    } */
+
+    .appear {
+        transition: 0.5s;
+        opacity: 1 !important;
+    }
+
+    @keyframes slideFromRight {
+        0% {
+            filter: blur(0.5vi);
+            transform-origin: right;
+            transform: scaleX(5) translateX(500px);
+        }
+
+        100% {
+            transform-origin: right;
+        }
+    }
+
+    @keyframes slideFromLeft {
+        0% {
+            transform-origin: left;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform-origin: left;
+        }
+    }
+}
