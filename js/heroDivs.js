@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let targetY = window.innerHeight / 2;
     let currentX = targetX;
     let currentY = targetY;
-    
+
     // Controle do Switch de Efeitos
-    let isFxEnabled = !isMobile; 
+    let isFxEnabled = true;
+
     const fxToggleBtn = document.querySelector('.fx-toggle');
 
     if (fxToggleBtn && !isMobile) {
@@ -49,8 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (window.innerWidth <= 1366) {
+        isFxEnabled = false;
+        fxToggleBtn.textContent = 'EFEITOS: OFF'
+    }
+
     // Se for mobile, para a execução do script aqui.
-    if (isMobile) return; 
+    if (isMobile) return;
 
     window.addEventListener('mousemove', (e) => {
         if (!isFxEnabled) return;
@@ -95,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const factor = 1.2;
                 const bgX = -(normalX * factor * 15);
                 const bgY = -(normalY * factor * 15);
-                
+
                 if (initialBgPositions[index]) {
                     const parts = initialBgPositions[index].split(' ');
                     const initX = parts[0] || '50%';

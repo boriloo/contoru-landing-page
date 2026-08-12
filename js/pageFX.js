@@ -20,15 +20,20 @@ function setupLerpScroll({
   }
 
   let isFxEnabled = true;
-  let isMobile = window.innerWidth <= 768;
-  
-  // Escuta o clique no botão FX para atualizar o estado aqui também
+
   const fxToggleBtn = document.querySelector('.fx-toggle');
+  let isMobile = window.innerWidth <= 768;
+
   if (fxToggleBtn) {
     fxToggleBtn.addEventListener('click', () => {
       isFxEnabled = !isFxEnabled;
       updateState();
     });
+  }
+
+  if (window.innerWidth <= 1366) {
+    isFxEnabled = false;
+    fxToggleBtn.textContent = 'EFEITOS: OFF'
   }
 
   let currentEase = (isMobile || !isFxEnabled) ? 1 : ease;

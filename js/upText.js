@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 document.addEventListener('DOMContentLoaded', () => {
     const triggerSection = document.querySelector('.trigger-section');
 
