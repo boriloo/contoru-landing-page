@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path+",
-      "destination": "https://app-contoru.vercel.app/:path+",
+      "destination": "/",
       "permanent": false
     }
   ]
