@@ -488,7 +488,7 @@
                     class="flex flex-row flex-wrap gap-6 w-full justify-center items-center mt-4 max-w-[1350px] min-h-[440px]">
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[330px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
 
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 relative overflow-hidden"
                             style="background-image: url('./public/assets/bridge.jpg'); background-size: cover; background-position: center;">
@@ -523,7 +523,7 @@
                     </div>
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[330px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 relative overflow-hidden"
                             style="background-image: url(./public/assets/mountain.jpg); background-size: cover;">
 
@@ -558,7 +558,7 @@
 
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[330px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 animate-filters"
                             style="background-image: url(./public/assets/neon.jpg); background-size: cover;"></div>
                         <div class="bg-bgSec p-5 min-h-40 group-hover:bg-first">
@@ -583,12 +583,17 @@
 
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-            <div class="bg-linear-to-b from-bg to-bgSec parallax w-full md:p-15 p-6 md:pb-30 pb-30 gap-4 items-center flex flex-col mt-[-5px] z-300"
+            <div class="bg-linear-to-b from-bg to-bgSec parallax w-full md:p-15 p-4 md:pb-30 pb-20 gap-4 items-center flex flex-col md:mt-[-5px] mt-[-65px] z-300"
                 parallax="1">
                 <div id="scale-card"
-                    class="w-[90%] min-h-[700px] rounded-2xl bg-red-500 flex flex-col gap-2 p-8 justify-between scale-10 transition-all duration-700"
+                    class="md:w-[90%] w-full min-h-[700px] rounded-2xl bg-red-500 flex flex-col gap-2 p-8 justify-between scale-10 transition-all duration-700"
                     style="background-image: url(./public/assets/campfire.jpg); background-size: cover; background-position: center;">
-                    <img src="./public/assets/logoContoruWhite.png" class="w-40 h-6">
+                    <div class="w-full flex justify-end">
+                        <a href=""
+                            class="bg-first p-4 px-8 text-white transition-all text-[20px] hover:bg-white hover:text-first opacity-0 pointer-events-none">
+                            Começar agora
+                        </a>
+                    </div>
                     <div class="w-full flex justify-center">
                         <p class="text-white">Todos os seus links em um.</p>
                     </div>
@@ -604,7 +609,7 @@
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
             <div class="bg-bg parallax w-full p-6 gap-4 justify-center items-center flex flex-col z-300">
-                <p class="p-2 px-5 rounded-full text-first bg-first/10">Feito por @Borilo</p>
+                <a class="p-2 px-5 rounded-full text-first bg-first/10">Feito por @Borilo</a>
                 <div class="flex flex-row gap-2">
                     <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-white"
                         style="background-image: url(./public/file/github.svg); background-size: cover;"></a>
@@ -612,8 +617,6 @@
                         style="background-image: url(./public/icons/linkedin.png); background-size: cover;"></a>
                     <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-white"
                         style="background-image: url(./public/icons/instagram.png); background-size: cover;"></a>
-                    <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-zinc-700"
-                        style="background-image: url(./public/icons/internet.png); background-size: 75%; background-position: center center; background-repeat: no-repeat;"></a>
                 </div>
             </div>
 
