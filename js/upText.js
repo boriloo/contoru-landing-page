@@ -32,3 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => observer.observe(card));
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const card = document.getElementById('scale-card');
+
+    // Configura as margens (ignora os primeiros e últimos 30% da tela)
+    const options = {
+        rootMargin: '-20% 0px -20% 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            // Entrou no meio da tela
+            card.classList.remove('scale-10');
+            card.classList.add('scale-100');
+        } else {
+            // Saiu do meio da tela
+            card.classList.remove('scale-100');
+            card.classList.add('scale-10');
+        }
+    }, options); // <- options passado aqui
+
+    observer.observe(card);
+});

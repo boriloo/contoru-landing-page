@@ -68,7 +68,7 @@
 
         <main class="w-full flex flex-col justify-center">
 
-            <div class="w-full flex flex-col gap-3 justify-center items-center parallax md:p-3 p-7 relative z-10 mt-[150px] mb-[100px]"
+            <div class="w-full flex flex-col gap-3 justify-center items-center parallax md:p-7 p-7 relative z-10 md:mt-[150px] mt-[80px] mb-[100px]"
                 parallax="1">
 
                 <div class="flex flex-row flex-wrap justify-between w-full max-w-[1400px]">
@@ -92,35 +92,66 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col w-full max-w-[500px] relative">
-                        <div class="absolute w-full max-w-[300px] rounded-xl h-[300px] z-10 right-[-150px] top-[-100px] parallax"
+                    <!-- Classes adicionadas aqui: max-[1360px]:max-w-full max-[1360px]:mt-[50px] max-[1360px]:items-center -->
+                    <div
+                        class="flex flex-col w-full max-w-[500px]  max-[1360px]:max-w-full max-[1360px]:mt-[140px] max-[1360px]:items-center relative">
+                        <div class="absolute w-full max-w-[300px] max-[770px]:hidden rounded-xl h-[300px] z-10 max-[1360px]:right-auto max-[1360px]:mr-[-450px] right-[-150px] top-[-100px] parallax"
                             style="background-image: url(./public/assets/divThree.jpg); background-position: center center; background-size: 150% 150%; background-repeat: no-repeat;"
                             parallax="2">
+                            <div
+                                class="absolute flex-1 flex flex-col p-4 top-5 right-10 px-5 scale-80 rounded-md items-center gap-3 min-w-30 hover:bg-white/20 cursor-pointer transition-all content-stretch">
+                                <div class="w-17 h-17"
+                                    style="background-image: url(./public/icons/claude.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
+                                </div>
+                                <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
+                                    Claude
+                                </p>
+                            </div>
                         </div>
-                        <div class="w-full max-w-[450px]  rounded-xl h-[650px] z-20 parallax overflow-hidden p-6 relative flex justify-center"
+                        <div class="w-full max-w-[450px] rounded-xl min-h-[650px] max-[770px]:min-h-[500px] max-[770px]:mt-[-80px] z-20 parallax overflow-hidden p-6 relative flex justify-center"
                             style="background-image: url(./public/assets/divOne.jpg); background-position: center center; background-size: 150% 150%; background-repeat: no-repeat;"
                             parallax="3">
 
                             <div
-                                class="w-[90%] bg-black/50 backdrop-blur-md rounded-full h-12 flex flex-row p-2 px-4 items-center gap-3">
+                                class="max-[770px]:w-full w-[90%] bg-black/50 backdrop-blur-md rounded-full h-12 flex flex-row p-2 px-4 items-center gap-3">
                                 <img src="./public/icons/search.png" class="w-6" alt="">
                                 <p class="text-white/50 text-[18px]">Pesquisar</p>
+
                             </div>
 
                             <div
-                                class="absolute flex-1 flex flex-col p-4 top-40 right-20 px-5 scale-80 rounded-md items-center gap-3 min-w-30 hover:bg-white/20 cursor-pointer transition-all content-stretch">
+                                class="absolute flex-1 flex flex-col p-4 top-70 left-10 px-5 scale-80 rounded-md items-center gap-3 min-w-30 hover:bg-white/20 cursor-pointer transition-all content-stretch">
+                                <div class="w-17 h-17"
+                                    style="background-image: url(./public/icons/vercel.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
+                                </div>
+                                <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
+                                    Project
+                                </p>
+                            </div>
+
+                            <div
+                                class="absolute flex-1 flex flex-col p-4 max-[770px]:top-30 max-[770px]:right-10 top-40 right-20 px-5 scale-80 rounded-md items-center gap-3 min-w-30 hover:bg-white/20 cursor-pointer transition-all content-stretch">
                                 <div class="w-17 h-17"
                                     style="background-image: url(./public/file/open-folder.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                                 </div>
                                 <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                    Imagens
+                                    Meus links
                                 </p>
                             </div>
 
                         </div>
-                        <div class="absolute w-full max-w-[350px] rounded-xl h-[250px] z-30 left-[-200px] bottom-[-180px] parallax faster-card"
+                        <div class="absolute w-full max-w-[350px] max-[770px]:hidden rounded-xl h-[250px] z-30 max-[1360px]:left-auto max-[1360px]:ml-[-450px] left-[-200px] bottom-[-180px] parallax faster-card"
                             style="background-image: url(./public/assets/divTwo.jpg); background-position: center center; background-size: 150% 150%; background-repeat: no-repeat;"
                             parallax="4">
+                            <div
+                                class="absolute flex-1 flex flex-col p-4 bottom-5 left-10 px-5 scale-80 rounded-md items-center gap-3 min-w-30 hover:bg-white/20 cursor-pointer transition-all content-stretch">
+                                <div class="w-17 h-17"
+                                    style="background-image: url(./public/icons/drive.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
+                                </div>
+                                <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
+                                    Backup
+                                </p>
+                            </div>
                         </div>
 
                     </div>
@@ -209,10 +240,10 @@
                     </div>
 
 
-                    <div class="flex-1 min-w-[300px] h-full rounded-2xl gap-5 p-3 shadow-black/10 shadow-lg flex flex-row flex-wrap w-full justify-start items-start overflow-hidden"
-                        style="background-image: url(./public/assets/italy.jpg); background-position: 60% 30%; background-repeat: no-repeat; background-size: 300%;">
+                    <div class="flex-1 min-w-[300px] h-full rounded-2xl gap-5 md:p-3 p-1 shadow-black/10 shadow-lg flex flex-row flex-wrap w-full justify-start items-start overflow-hidden"
+                        style="background-image: url(./public/assets/italy.jpg); background-position: 60% 30%; background-repeat: no-repeat; background-size: 350%;">
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17 bg-gray-400 rounded-full"
                                 style="background-image: url(./public/file/github.svg); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -221,7 +252,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -229,7 +260,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/open-folder.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -238,7 +269,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/figma.svg); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -247,7 +278,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -256,7 +287,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -265,7 +296,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -273,7 +304,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/spotify.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -283,7 +314,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1 md:flex hidden flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/Notion.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -292,7 +323,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
+                            class="flex-1 md:flex hidden flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -301,7 +332,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
+                            class="flex-1  md:flex flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch max-[1250px]:hidden">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/docs.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -311,7 +342,7 @@
                             </p>
                         </div>
                         <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
+                            class="flex-1 md:flex hidden flex-col md:p-4 md:px-5 p-2 py-4 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
                             <div class="w-17 h-17"
                                 style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
                             </div>
@@ -345,7 +376,7 @@
                     </div>
 
                     <div
-                        class="flex overflow-hidden flex-row hide-text w-full md:max-w-[600px] md:h-[300px] max-w-[330px] h-[300px] absolute right-0 bottom-16">
+                        class="flex overflow-hidden flex-row hide-text w-full md:max-w-[600px] md:h-[300px] max-w-[330px] h-[300px] absolute right-0 md:bottom-0 bottom-16">
                         <div style="--i: 20; background-image: url(./public/assets/tree.jpg); background-size: cover; background-attachment: fixed;"
                             class="w-full h-full image hover:shadow-[-20px_0px_0px_10px] shadow-fg hover:translate-x-10 group transition-all duration-400">
                             <div
@@ -371,7 +402,8 @@
 
                 <div class="w-full flex justify-around flex-row flex-wrap md:gap-4 gap-8">
                     <div class="flex flex-col gap-3 justify-start w-full max-w-[700px]">
-                        <h1 class="md:text-[70px]/[70px] text-[50px]/[50px] text-fg mt-15 text-start px-2">Compartilhe sem
+                        <h1 class="md:text-[70px]/[70px] text-[50px]/[50px] text-fg mt-15 text-start px-2">Compartilhe
+                            sem
                             complicação</h1>
                         <p class="md:text-[22px] text-[22px] text-fg text-start text-gray px-2">Crie um desktop
                             compartilhado, convide <span class="text-second font-medium">amigos</span>, trabalhem
@@ -379,7 +411,7 @@
                         </p>
                     </div>
 
-                    <div class="bg-bg w-full max-w-[600px] rounded-xl border-2 border-fg/10 flex flex-col gap-4 md:p-6 p-4 parallax"
+                    <div class="bg-bg w-full max-w-[600px] rounded-xl border-2 border-fg/10 flex flex-col gap-4 md:p-6 p-4 parallax max-[1360px]:mt-8"
                         parallax="1.5">
                         <div class="w-full flex flex-row justify-between flex-wrap gap-2 items-center">
                             <p class="text-gray text-[24px]">Membros do Desktop</p>
@@ -456,7 +488,7 @@
                     class="flex flex-row flex-wrap gap-6 w-full justify-center items-center mt-4 max-w-[1350px] min-h-[440px]">
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[300px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
 
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 relative overflow-hidden"
                             style="background-image: url('./public/assets/bridge.jpg'); background-size: cover; background-position: center;">
@@ -491,7 +523,7 @@
                     </div>
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[300px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 relative overflow-hidden"
                             style="background-image: url(./public/assets/mountain.jpg); background-size: cover;">
 
@@ -526,7 +558,7 @@
 
 
                     <div
-                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[300px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
+                        class="flex flex-col transition-all duration-500 group hover:scale-105 flex-1 min-w-[350px] max-h-[180px] hover:max-h-[500px] overflow-hidden">
                         <div class="w-full h-0 transition-all duration-500 group-hover:h-50 animate-filters"
                             style="background-image: url(./public/assets/neon.jpg); background-size: cover;"></div>
                         <div class="bg-bgSec p-5 min-h-40 group-hover:bg-first">
@@ -551,185 +583,37 @@
 
             <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-            <div class="bg-bgSec parallax w-full md:p-15 p-6 md:pb-30 pb-30 gap-4 items-center flex flex-col mt-[-5px] z-300"
+            <div class="bg-linear-to-b from-bg to-bgSec parallax w-full md:p-15 p-6 md:pb-30 pb-30 gap-4 items-center flex flex-col mt-[-5px] z-300"
                 parallax="1">
-                <h1 class="md:text-[60px] text-[50px]/[50px] text-fg mt-15 text-center">Acompanhe tudo que você (ou sua
-                    equipe) fez</h1>
-                <p class="md:text-[22px] text-[22px] text-fg text-center text-gray">Como manter-se sempre atualizado e
-                    ciente do
-                    que está
-                    fazendo? <br>
-                    Simples, com uma
-                    interface 100% <span class="text-second font-medium">visual</span> e <span
-                        class="text-third font-medium">interativa</span>.
-                </p>
-                <div class="flex flex-row gap-5 w-full items-center flex-wrap max-w-[1300px] mt-5 md:pb-15">
-                    <div class="flex flex-col flex-1 gap-6 min-w-[300px]">
-
-                        <div class="flex-1 h-full rounded-2xl flex justify-center items-center min-h-[100px] shadow-black/10 shadow-lg"
-                            style="background-image: url(./public/assets/italy.jpg); background-position: 60% 60%; background-repeat: no-repeat; background-size: 300%;">
-                            <button
-                                class="flex flex-row gap-4 items-center rounded-xl p-3 px-5 bg-black/40 hover:bg-first transition-all cursor-pointer hover:scale-105 backdrop-blur-md">
-                                <img src="./public/icons/add.png" class="w-10" alt="">
-                                <p class="text-white text-[30px]">Criar</p>
-                            </button>
-                        </div>
-
-                        <div class="flex-3 h-full rounded-2xl md:p-4 p-2 shadow-black/10 shadow-lg"
-                            style="background-image: url(./public/assets/italy.jpg); background-position: 90% 65%; background-repeat: no-repeat; background-size: 300%;">
-                            <div class="p-3 rounded-xl bg-[#091210] h-full justify-center items-center flex flex-col">
-
-                                <div class="flex flex-row gap-2 w-full">
-                                    <div
-                                        class="flex-1 h-30 gap-2 flex flex-col justify-center items-center border-2 bg-black/20 rounded-lg border-first/30">
-                                        <img src="./public/icons/folder.png" class="w-10" alt="">
-                                        <p class="text-first/50">Pasta</p>
-                                    </div>
-
-                                    <div
-                                        class="flex-1 h-30 gap-2 flex flex-col justify-center items-center border-2 bg-first rounded-lg border-second">
-                                        <img src="./public/icons/link.png" class="w-10" alt="">
-                                        <p class="text-white">Link</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2 mt-4 w-full">
-                                    <p class="text-white text-[18px]">Nome</p>
-                                    <div
-                                        class="w-full text-[18px] p-2 px-3 border-2 rounded-md border-first bg-first/15 text-first">
-                                        Tutorial</div>
-                                </div>
-
-                                <div class="flex flex-col gap-2 mt-4 w-full">
-                                    <p class="text-white text-[18px]">URL</p>
-                                    <div
-                                        class="w-full text-[18px] p-2 px-3 border-2 rounded-md border-first bg-first/15 text-first">
-                                        https://youtu.be/sTX0UEplF54</div>
-                                </div>
-
-                                <button
-                                    class="flex mt-4 flex-row items-center rounded-lg p-2 px-14 bg-first hover:bg-white text-white hover:text-black transition-all cursor-pointer backdrop-blur-md">
-                                    <p class="text-[20px] ">Criar</p>
-                                </button>
-
-                            </div>
-                        </div>
+                <div id="scale-card"
+                    class="w-[90%] min-h-[700px] rounded-2xl bg-red-500 flex flex-col gap-2 p-8 justify-between scale-10 transition-all duration-700"
+                    style="background-image: url(./public/assets/campfire.jpg); background-size: cover; background-position: center;">
+                    <img src="./public/assets/logoContoruWhite.png" class="w-40 h-6">
+                    <div class="w-full flex justify-center">
+                        <p class="text-white">Todos os seus links em um.</p>
                     </div>
-
-
-                    <div class="flex-1 min-w-[300px] h-full rounded-2xl gap-5 p-3 shadow-black/10 shadow-lg flex flex-row flex-wrap w-full justify-start items-start overflow-hidden"
-                        style="background-image: url(./public/assets/italy.jpg); background-position: 60% 30%; background-repeat: no-repeat; background-size: 300%;">
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17 bg-gray-400 rounded-full"
-                                style="background-image: url(./public/file/github.svg); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Repo
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/open-folder.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Imagens
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/figma.svg); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Wireframes
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Tutorial
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 flex flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/spotify.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p
-                                class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px] text-center">
-                                Playlist Foco
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/Notion.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Wiki
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                                Youtube
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 hover:bg-white/30 cursor-pointer transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/docs.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p
-                                class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px] text-center">
-                                Proposta.txt
-                            </p>
-                        </div>
-                        <div
-                            class="flex-1 md:flex hidden flex-col p-4 px-5 rounded-md items-center gap-3 min-w-30 opacity-0 transition-all content-stretch">
-                            <div class="w-17 h-17"
-                                style="background-image: url(./public/file/youtube.png); background-position: center center; background-size: contain; background-repeat: no-repeat;">
-                            </div>
-                            <p class="p-1 p-2 bg-black/40 backdrop-blur-md rounded-md text-white text-[16px]">
-                            </p>
-                        </div>
-
+                    <div class="w-full flex justify-end">
+                        <a href=""
+                            class="bg-first p-4 px-8 text-white transition-all text-[20px] hover:bg-white hover:text-first">
+                            Começar agora
+                        </a>
                     </div>
+                </div>
+            </div>
 
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
+            <div class="bg-bg parallax w-full p-6 gap-4 justify-center items-center flex flex-col z-300">
+                <p class="p-2 px-5 rounded-full text-first bg-first/10">Feito por @Borilo</p>
+                <div class="flex flex-row gap-2">
+                    <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-white"
+                        style="background-image: url(./public/file/github.svg); background-size: cover;"></a>
+                    <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-white"
+                        style="background-image: url(./public/icons/linkedin.png); background-size: cover;"></a>
+                    <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-white"
+                        style="background-image: url(./public/icons/instagram.png); background-size: cover;"></a>
+                    <a href="" class="w-9 h-9 rounded-full hover:scale-110 transition-all bg-zinc-700"
+                        style="background-image: url(./public/icons/internet.png); background-size: 75%; background-position: center center; background-repeat: no-repeat;"></a>
                 </div>
             </div>
 
